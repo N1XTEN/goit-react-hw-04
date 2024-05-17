@@ -8,10 +8,6 @@ const SearchBar = ({ onSubmit }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (!/^[a-zA-Z\s]*$/.test(query.trim())) {
-            toast("❌   Please enter valid letters only.");
-            return;
-        }
         if (query.trim() === '') {
             toast.error("Please enter a search query.");
             return;

@@ -50,7 +50,7 @@ const App = () => {
     fetchImages();
   }, [query, page, apiKey]);
 
-  const handleSearch = query => {
+  const handleSearch = (query) => {
     setQuery(query);
     setPage(1);
     setImages([]);
@@ -58,7 +58,7 @@ const App = () => {
 
   const loadMore = () => setPage(prev => prev + 1);
 
-  const handleImageClick = image => {
+  const handleImageClick = (image) => {
     setSelectedImage(image);
     setIsModalOpen(true);
   };
